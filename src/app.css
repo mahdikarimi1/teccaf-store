@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* انیمیشن تغییر تم */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
+
+/* جلوگیری از انیمیشن روی تصاویر */
+img {
+    transition: none;
+}
+
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./fonts/Vazir-Medium.ttf') format('ttf'),
+        url('./fonts/Vazir-Medium.woff2') format('woff2'),
+        url('./fonts/Vazir-Medium.woff') format('woff'),
+        url('./fonts/Vazir-Medium.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    /* color: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+    ; */
+}
+
+
+/* تنظیمات پایه برای دارک مود */
+@layer base {
+
+    /* پس‌زمینه اصلی صفحه در حالت عادی */
+    body {
+        @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+        font-family: 'MyFont', sans-serif
+    }
+
+    /* فعال‌سازی دارک مود */
+    .dark body {
+        /* استفاده از zinc-900 به عنوان رنگ پایه دارک مود */
+        @apply bg-[#0f1216] text-gray-100;
+        /* متن کمی روشن‌تر برای کنتراست */
+    }
+}
+
+/* کلاس‌های کمکی برای دارک مود */
+
+/* جایگزینی کلاس‌های رنگی که قبلاً خاکستری تیره بودند */
+.dark .bg-white {
+    /* اگر در حالت عادی صفحه سفید است، در دارک مود تبدیل به یک رنگ تیره‌تر از zinc-900 شود */
+    @apply bg-[#16181b];
+
+    /* zinc-800 کمی روشن‌تر از zinc-900 است */
+}
+
+.dark .bg-gray-50 {
+    /* تبدیل رنگ‌های خاکستری روشن به تیره‌تر */
+    @apply bg-[#0f1216];
+
+
+}
+
+.dark .bg-gray-100 {
+    /* تبدیل رنگ‌های خاکستری روشن به تیره‌تر */
+    @apply bg-[#0f1216];
+
+}
+
+.dark .text-gray-700 {
+    /* متن تیره‌تر در حالت عادی، در دارک مود روشن‌تر می‌شود */
+    @apply text-zinc-300;
+    /* از طیف رنگی zinc برای متن استفاده می‌کنیم */
+}
+
+.dark .text-gray-800 {
+    /* متن تیره‌تر در حالت عادی، در دارک مود روشن‌تر می‌شود */
+    @apply text-zinc-200;
+}
+
+.dark .text-gray-500 {
+    /* متن متوسط در حالت عادی، در دارک مود روشن‌تر می‌شود */
+    @apply text-zinc-400;
+}
+
+/* حاشیه‌ها */
+.dark .border-gray-100 {
+    /* حاشیه‌ها را نیز تیره‌تر می‌کنیم */
+    @apply border-zinc-800;
+}
+
+.dark .border-gray-200 {
+    @apply border-zinc-800;
+}
+
+/* سایه‌ها */
+.dark .shadow-md {
+    /* سایه را تیره‌تر و با شفافیت مناسب تنظیم می‌کنیم */
+    @apply shadow-zinc-900/50 hover:shadow-zinc-800/50;
+
+    /* یا shadow-black/50 که نتیجه مشابهی دارد */
+}
+
+.dark .shadow-lg {
+    @apply shadow-zinc-700;
+}
+
+/* اسکرول بار دارک مود */
+.dark ::-webkit-scrollbar {
+    /* پس‌زمینه اسکرول بار در دارک مود */
+    @apply bg-zinc-800;
+    /* یا bg-zinc-900 */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    /* رنگ خود اسکرول بار در دارک مود */
+    @apply bg-zinc-600;
+    /* یا bg-zinc-700 */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    /* رنگ اسکرول بار هنگام هاور در دارک مود */
+    @apply bg-zinc-500;
+    /* یا bg-zinc-600 */
+}
