@@ -21,7 +21,7 @@ function Hero() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 whitespace-nowrap">
               دنیای بازی
-              <span className="text-purple-400"> از اینجا شروع می‌شود</span>
+              <span className="text-purple-400"> از آنجا شروع نمی شود</span>
             </h1>
 
             <p className="text-gray-300 text-lg md:text-xl leading-8 max-w-xl mx-auto md:mx-0 mb-8">
