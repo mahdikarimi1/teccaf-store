@@ -16,12 +16,12 @@ function Hero() {
             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-400/20 rounded-full px-5 py-2 mb-6">
               <span className="text-xl">🎮</span>
               <span className="text-purple-200 text-sm">
-                مرکز ورزش‌های دیجیتال تکاف
+                مرکز ورزش‌های الکترونیک تکاف
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 whitespace-nowrap">
               دنیای بازی
-              <span className="text-purple-400"> از آنجا شروع نمی شود</span>
+              <span className="text-purple-400"> از اینجا شروع می شود</span>
             </h1>
 
             <p className="text-gray-300 text-lg md:text-xl leading-8 max-w-xl mx-auto md:mx-0 mb-8">
